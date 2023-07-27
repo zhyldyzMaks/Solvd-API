@@ -17,6 +17,7 @@ public class CatVideosTest {
     public void searchCatVideos() {
         SearchCatVideosMethod search = new SearchCatVideosMethod();
         Response response = search.callAPIExpectSuccess();
+        search.validateResponseAgainstSchema("youtube/_get/rs.schema");
         JSONObject jsonResponse = new JSONObject(response.getBody().asString());
         JSONArray itemsArray = jsonResponse.getJSONArray("items");
         for (int i = 0; i < itemsArray.length(); i++) {
@@ -24,7 +25,7 @@ public class CatVideosTest {
             JSONObject snippet = video.getJSONObject("snippet");
 
             String uploadDate = snippet.getString("publishedAt");
-            Assert.assertNotNull(uploadDate, "Upload date not found for video: " + video.getJSONObject("id").getString("videoId"));
+            Assert.assertNotNull(uploadDate, "Upload date not found for video" + video.getJSONObject("id").getString("videoId"));
 
             String description = snippet.getString("description");
             Assert.assertNotNull(description, "Description not found for video: " + video.getJSONObject("id").getString("videoId"));

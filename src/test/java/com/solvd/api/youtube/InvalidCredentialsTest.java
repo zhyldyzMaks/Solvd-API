@@ -9,8 +9,6 @@ import org.testng.annotations.Test;
 public class InvalidCredentialsTest {
     private  static final Logger logger = LogManager.getLogger(CatVideosTest.class);
 
-    public InvalidCredentialsTest() {}
-
     @Test
     public void invalidCredentialsTest() {
         InvalidCredentialsMethod invalidCredentials = new InvalidCredentialsMethod();

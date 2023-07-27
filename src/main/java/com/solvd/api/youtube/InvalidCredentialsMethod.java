@@ -13,8 +13,6 @@ public class InvalidCredentialsMethod extends AbstractApiMethodV2 {
 
     public InvalidCredentialsMethod() {
         replaceUrlPlaceholder("base_url",Configuration.getRequired("api_url"));
-        addUrlParameter("part", "snippet");
-        addUrlParameter("q", "cat videos");
         addUrlParameter("type", "video");
         addUrlParameter("key", "Invalid-API-KEY");
     }
