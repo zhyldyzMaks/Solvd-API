@@ -16,7 +16,7 @@ public class YoutubeAPITest {
     private static final Logger logger = LogManager.getLogger(YoutubeAPITest.class);
 
     @Test
-    public void searchCatVideos() {
+    public void testSearchCatVideos() {
         SearchVideosMethod search = new SearchVideosMethod("cat videos");
         Response response = search.callAPIExpectSuccess();
         search.validateResponseAgainstSchema("api/youtube/_get/search_rs.schema");
@@ -44,12 +44,10 @@ public class YoutubeAPITest {
     }
 
     @Test
-    public void javaBeginnersVideosAndComments() {
+    public void testJavaBeginnersVideosAndComments() {
         SearchVideosMethod search = new SearchVideosMethod("java beginners");
         Response response = search.callAPIExpectSuccess();
         search.validateResponseAgainstSchema("api/youtube/_get/search_rs.schema");
-        String videoId = response.path("items[0].id.videoId");
-        logger.info("Video ID for the first video: {}", videoId);
         GetVideoCommentsMethod comments = new GetVideoCommentsMethod("eIrMbAQSU34");
         Response commentsResponse = comments.callAPIExpectSuccess();
         List<Map<String, Object>> items = commentsResponse.jsonPath().getList("items");
@@ -71,7 +69,7 @@ public class YoutubeAPITest {
     }
 
     @Test
-    public void invalidCredentialsTest() {
+    public void testSearchWithInvalidCredentialsTest() {
         InvalidCredentialsMethod invalidCredentials = new InvalidCredentialsMethod();
         Response response = invalidCredentials.callAPI();
         int statusCode = response.getStatusCode();
