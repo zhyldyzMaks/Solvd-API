@@ -52,6 +52,7 @@ public class YoutubeAPITest {
         Response commentsResponse = comments.callAPIExpectSuccess();
         List<Map<String, Object>> items = commentsResponse.jsonPath().getList("items");
         Assert.assertTrue(items.size() > 0, "No comments found for the video");
+
         SoftAssert softAssert = new SoftAssert();
 
         for (int i = 0; i < items.size(); i++) {
