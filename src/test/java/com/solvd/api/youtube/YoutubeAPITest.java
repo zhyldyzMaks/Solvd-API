@@ -46,7 +46,7 @@ public class YoutubeAPITest {
     @Test
     public void testJavaBeginnersVideosAndComments() {
         SearchVideosMethod search = new SearchVideosMethod("java beginners");
-        Response response = search.callAPIExpectSuccess();
+        search.callAPIExpectSuccess();
         search.validateResponseAgainstSchema("api/youtube/_get/search_rs.schema");
         GetVideoCommentsMethod comments = new GetVideoCommentsMethod("eIrMbAQSU34");
         Response commentsResponse = comments.callAPIExpectSuccess();
