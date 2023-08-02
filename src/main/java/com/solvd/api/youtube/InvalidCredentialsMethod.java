@@ -7,7 +7,7 @@ import com.zebrunner.carina.api.http.HttpMethodType;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
-@Endpoint(url = "${base_url}", methodType = HttpMethodType.GET)
+@Endpoint(url = "${base_url}/search", methodType = HttpMethodType.GET)
 @SuccessfulHttpStatus(status = HttpResponseStatusType.BAD_REQUEST_400)
 public class InvalidCredentialsMethod extends AbstractApiMethodV2 {
 
