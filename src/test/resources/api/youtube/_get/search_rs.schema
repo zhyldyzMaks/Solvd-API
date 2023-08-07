@@ -1,0 +1,201 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "kind": {
+      "type": "string"
+    },
+    "etag": {
+      "type": "string"
+    },
+    "nextPageToken": {
+      "type": "string"
+    },
+    "regionCode": {
+      "type": "string"
+    },
+    "pageInfo": {
+      "type": "object",
+      "properties": {
+        "totalResults": {
+          "type": "integer"
+        },
+        "resultsPerPage": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "totalResults",
+        "resultsPerPage"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "etag": {
+              "type": "string"
+            },
+            "id": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string"
+                },
+                "videoId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kind",
+                "videoId"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "etag",
+            "id"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "etag": {
+              "type": "string"
+            },
+            "id": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string"
+                },
+                "videoId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kind",
+                "videoId"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "etag",
+            "id"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "etag": {
+              "type": "string"
+            },
+            "id": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string"
+                },
+                "videoId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kind",
+                "videoId"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "etag",
+            "id"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "etag": {
+              "type": "string"
+            },
+            "id": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string"
+                },
+                "videoId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kind",
+                "videoId"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "etag",
+            "id"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "etag": {
+              "type": "string"
+            },
+            "id": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string"
+                },
+                "videoId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kind",
+                "videoId"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "etag",
+            "id"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "etag",
+    "nextPageToken",
+    "regionCode",
+    "pageInfo",
+    "items"
+  ]
+}
